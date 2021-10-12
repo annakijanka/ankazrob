@@ -10,6 +10,7 @@ web/app/themes/index.php
 web/app/themes/twentynineteen/
 web/app/themes/twentytwenty/
 web/app/themes/twentytwentyone/
+web/app/languages/
 
 # WordPress
 web/wp
