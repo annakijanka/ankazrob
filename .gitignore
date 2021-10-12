@@ -5,6 +5,11 @@ web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
+web/app/index.php
+web/app/themes/index.php
+web/app/themes/twentynineteen/
+web/app/themes/twentytwenty/
+web/app/themes/twentytwentyone/
 
 # WordPress
 web/wp
