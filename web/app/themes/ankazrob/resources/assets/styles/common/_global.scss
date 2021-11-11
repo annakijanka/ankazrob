@@ -1,0 +1,19 @@
+a {
+  transition: $transition-base;
+  font-weight: 900;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.highlighter {
+  background-position-y: 0;
+  background-image: linear-gradient($white 50%, $accent 50%);
+  background-size: auto 175%;
+  transition: $transition-base;
+
+  &:hover {
+    background-position-y: 100%;
+  }
+}

@@ -1,7 +1,26 @@
-.banner .nav li {
-  @extend .nav-item;
+.banner {
+  .nav {
+    li {
+      padding: 0 1em;
+
+      a {
+        color: $body-color;
+      }
+    }
+  }
 }
 
-.banner .nav a {
-  @extend .nav-link;
+.brand {
+  display: flex;
+  align-items: center;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $body-color;
+  font-size: 1.75rem;
+  line-height: 1;
+
+  .brand-logo {
+    width: 48px;
+    height: auto;
+  }
 }

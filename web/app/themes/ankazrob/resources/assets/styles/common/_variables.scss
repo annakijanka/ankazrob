@@ -2,9 +2,23 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  primary: #525ddc
+  primary: #190eae,
+  secondary: #c31707
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+$font-family-base: overpass, arial, sans-serif;
+$font-weight-base: 300;
+
+$headings-font-family: chivo, arial, sans-serif;
+$headings-font-weight: 900;
+
+$body-bg: #fdfdfd;
+$body-color: #070434;
+
+$accent: #1bc0c2;
+
+$link-hover-color: $body-color;

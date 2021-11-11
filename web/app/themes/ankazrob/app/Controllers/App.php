@@ -6,7 +6,7 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
-    public function siteName()
+    public static function siteName()
     {
         return get_bloginfo('name');
     }
@@ -29,5 +29,16 @@ class App extends Controller
             return __('Not Found', 'sage');
         }
         return get_the_title();
+    }
+
+    public static function brandLogo()
+    {
+        $custom_logo_id = get_theme_mod('custom_logo');
+        $logo_src = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+        if (has_custom_logo()) {
+            return '<img class="brand-logo" src="' . esc_url($logo_src[0]) . '" alt="' . self::siteName() . '">';
+        }
+        return;
     }
 }
