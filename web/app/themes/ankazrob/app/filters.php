@@ -90,7 +90,9 @@ add_filter('comments_template', function ($comments_template) {
     return $comments_template;
 }, 100);
 
-add_filter('nav_menu_link_attributes', function ($atts) {
-    $atts['class'] = 'highlighter';
+add_filter('nav_menu_link_attributes', function ($atts, $item) {
+    if (!in_array('btn', $item->classes)) {
+        $atts['class'] = 'highlighter';
+    }
     return $atts;
 }, 10, 4);
