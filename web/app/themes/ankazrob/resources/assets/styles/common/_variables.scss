@@ -2,8 +2,8 @@
 @import "~bootstrap/scss/functions";
 
 $theme-colors: (
-  primary: #190eae,
-  secondary: #c31707
+  primary: #0f8284,
+  secondary: #20d8da
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
@@ -19,6 +19,6 @@ $headings-font-weight: 900;
 $body-bg: #fdfdfd;
 $body-color: #070434;
 
-$accent: #1bc0c2;
+$accent: #c31707;
 
 $link-hover-color: $body-color;

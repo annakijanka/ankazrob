@@ -9,7 +9,7 @@ a {
 
 .highlighter {
   background-position-y: 0;
-  background-image: linear-gradient($white 50%, $accent 50%);
+  background-image: linear-gradient($white 50%, theme-color("secondary") 50%);
   background-size: auto 175%;
   transition: $transition-base;
 
