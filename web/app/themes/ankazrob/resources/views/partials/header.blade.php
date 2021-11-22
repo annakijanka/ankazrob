@@ -1,6 +1,6 @@
 <header class="banner">
   <div class="container d-flex justify-content-between align-items-center my-3">
-    <a class="brand" href="{{ home_url('/') }}">
+    <a class="brand link-as-text" href="{{ home_url('/') }}">
       {!! App::brandLogo() !!}
       <span class="ml-2">{{ get_bloginfo('name', 'display') }}</span>
     </a>

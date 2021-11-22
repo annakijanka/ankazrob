@@ -91,8 +91,10 @@ add_filter('comments_template', function ($comments_template) {
 }, 100);
 
 add_filter('nav_menu_link_attributes', function ($atts, $item) {
-    if (!in_array('btn', $item->classes)) {
-        $atts['class'] = 'highlighter';
+    if (in_array('btn', $item->classes)) {
+        $atts['class'] = 'link-as-text';
+    } else {
+        $atts['class'] = 'font-weight-normal link-with-circle';
     }
     return $atts;
 }, 10, 4);

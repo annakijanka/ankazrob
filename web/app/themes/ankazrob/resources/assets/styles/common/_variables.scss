@@ -3,7 +3,8 @@
 
 $theme-colors: (
   primary: #0f8284,
-  secondary: #20d8da
+  secondary: #20d8da,
+  accent: #c31707
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
@@ -19,6 +20,8 @@ $headings-font-weight: 900;
 $body-bg: #fdfdfd;
 $body-color: #070434;
 
-$accent: #c31707;
+$link-hover-color: theme-color("primary");
 
-$link-hover-color: $body-color;
+$border-radius: 0.8rem;
+$border-radius-sm: 0.7rem;
+$border-radius-lg: 1rem;

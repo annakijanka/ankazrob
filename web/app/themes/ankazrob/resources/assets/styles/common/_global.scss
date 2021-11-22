@@ -1,19 +1,53 @@
 a {
-  transition: $transition-base;
-  font-weight: 900;
+  position: relative;
+  padding-bottom: 0.2em;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.2em;
+    background-color: currentColor;
+    transition: $transition-base;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 
   &:hover {
     text-decoration: none;
+
+    &::after {
+      width: 100%;
+    }
   }
-}
 
-.highlighter {
-  background-position-y: 0;
-  background-image: linear-gradient($white 50%, theme-color("secondary") 50%);
-  background-size: auto 175%;
-  transition: $transition-base;
+  &.link-as-text {
+    padding-bottom: 0;
+    color: inherit;
 
-  &:hover {
-    background-position-y: 100%;
+    &::after {
+      display: none;
+    }
+  }
+
+  &.link-with-circle {
+    padding-bottom: 0.5rem;
+    color: $body-color;
+
+    &::after {
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: theme-color("primary");
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+    }
+
+    &:hover {
+      &::after {
+        transform: translateX(-50%) scale(1);
+      }
+    }
   }
 }

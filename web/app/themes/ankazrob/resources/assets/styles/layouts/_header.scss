@@ -1,10 +1,16 @@
 .banner {
   .nav {
+    align-items: center;
+
     li {
-      padding: 0 1em;
+      margin: 0 1em;
+
+      &.btn {
+        margin: 0 0.5em;
+      }
 
       a {
-        color: $body-color;
+        display: inline-block;
       }
     }
   }
@@ -22,5 +28,25 @@
   .brand-logo {
     width: 48px;
     height: auto;
+    transition: $transition-base;
+  }
+
+  &:hover {
+    .brand-logo {
+      transform: rotate(15deg);
+    }
+  }
+}
+
+.current-menu-item {
+  .link-with-circle {
+    &::after {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+
+  &.btn {
+    background-color: $body-color;
+    border-color: $body-color;
   }
 }
