@@ -1,50 +1,66 @@
 a {
-  position: relative;
-  padding-bottom: 0.2em;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0.2em;
-    background-color: currentColor;
-    transition: $transition-base;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
+  background-image: linear-gradient(transparent 0, transparent calc(50% - 7px), theme-color("secondary") calc(50% - 7px), theme-color("secondary") 100%);
+  background-size: 100% 200%;
+  background-position: 0 0;
+  transition: $transition-base;
 
   &:hover {
     text-decoration: none;
+    background-position: 0 100%;
+  }
 
-    &::after {
-      width: 100%;
-    }
+  &.focus,
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem currentColor;
+    border-radius: $border-radius;
+  }
+
+  &.active,
+  &:active {
+    background-position: 0 100%;
   }
 
   &.link-as-text {
-    padding-bottom: 0;
     color: inherit;
-
-    &::after {
-      display: none;
-    }
+    background: none;
   }
 
   &.link-with-circle {
     padding-bottom: 0.5rem;
     color: $body-color;
+    position: relative;
+    background: none;
 
     &::after {
+      content: "";
+      display: block;
       width: 0.5rem;
       height: 0.5rem;
       background-color: theme-color("primary");
+      transition: $transition-base;
+      position: absolute;
       border-radius: 50%;
       left: 50%;
+      bottom: 0;
       transform: translateX(-50%) scale(0);
     }
 
     &:hover {
+      &::after {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+
+    &.focus,
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem currentColor;
+      border-radius: $border-radius;
+    }
+
+    &.active,
+    &:active {
       &::after {
         transform: translateX(-50%) scale(1);
       }

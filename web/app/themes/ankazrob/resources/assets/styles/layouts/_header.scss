@@ -36,6 +36,13 @@
       transform: rotate(15deg);
     }
   }
+
+  &.active,
+  &:active {
+    .brand-logo {
+      transform: rotate(15deg);
+    }
+  }
 }
 
 .current-menu-item {

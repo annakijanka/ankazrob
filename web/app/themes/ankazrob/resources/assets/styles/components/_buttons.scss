@@ -1,0 +1,43 @@
+.btn-primary {
+  &:hover {
+    background-color: $body-color;
+    border-color: $body-color;
+  }
+
+  &.focus,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem $body-color;
+  }
+
+  &:not(:disabled) {
+    &:not(.disabled) {
+      &.active,
+      &:active {
+        background-color: $body-color;
+        border-color: $body-color;
+      }
+    }
+  }
+}
+
+.btn-accent {
+  &:hover {
+    background-color: $body-color;
+    border-color: $body-color;
+  }
+
+  &.focus,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem $body-color;
+  }
+
+  &:not(:disabled) {
+    &:not(.disabled) {
+      &.active,
+      &:active {
+        background-color: $body-color;
+        border-color: $body-color;
+      }
+    }
+  }
+}
